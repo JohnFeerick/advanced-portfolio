@@ -6,6 +6,15 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
     <title>John Feerick</title>
+    <script src="index.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("bVhu93aX2Zra0TCYB");
+        })();
+    </script>
 </head>
 <body>
     <section id="landing-page">
@@ -114,18 +123,18 @@
             <div class="modal__half modal__contact">
                 <h3 class="modal__title modal__title--contact">Let's have a chat</h3>
                 <h4 class="modal__sub-title modal__sub-title--contact">I'd love to hear from you</h4>
-                <form action="" id="contact__form">
+                <form action="" id="contact__form" onsubmit="contact(event)">
                     <div class="form__item">
                         <label class="form__item--label">Name</label>
-                        <input type="text" name="user_name" class="input" required></input>
+                        <input type="text" name="user_name" class="input"></input>
                     </div>
                     <div class="form__item">
                         <label class="form__item--label">E-mail</label>
-                        <input type="email" name="user_email" class="input" required></input>
+                        <input type="email" name="user_email" class="input"></input>
                     </div>
                     <div class="form__item">
                         <label class="form__item--label">Message</label>
-                        <textarea type="text" name="message" class="input" required></textarea>
+                        <textarea type="text" name="message" class="input"></textarea>
                     </div>
                     <button id="contact__submit" class="form__submit">Send it my way</button>
                 </form>
